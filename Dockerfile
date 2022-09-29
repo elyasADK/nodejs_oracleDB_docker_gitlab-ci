@@ -23,4 +23,4 @@ RUN apk --no-cache add libaio libnsl libc6-compat curl unzip && \
 
 ENV LD_LIBRARY_PATH /usr/lib/instantclient
 EXPOSE 9010
-CMD exec node app_misapi.js
+CMD exec node app_elyasapi.js
