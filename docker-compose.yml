@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  misapi1-container:
+    image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+    restart: always
+    container_name: 'elyas_nodejs'
+    ports:
+      - 8011:9010
+    networks:
+      - elyas
+    volumes:
+      - /Modules/DocumentRoot/:/Modules/DocumentRoot
+networks:
+  isaco:
+    name: elyas
+    external: true
