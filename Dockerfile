@@ -6,8 +6,8 @@ RUN npm i
 COPY . /elyasapi
 
 # COPY oic.zip  /tmp
-RUN apk --no-cache add libaio libnsl libc6-compat curl && \
-    cd /tmp && \
+RUN apk --no-cache add libaio libnsl libc6-compat curl unzip && \
+#     cd /tmp && \
     curl -o instantclient-basiclite.zip https://download.oracle.com/otn_software/linux/instantclient/instantclient-basiclite-linuxx64.zip -SL && \
     unzip instantclient-basiclite.zip && \
 #     unzip oic.zip && \
